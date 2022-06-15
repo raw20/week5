@@ -1,0 +1,290 @@
+@keyframes zoom {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bike {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(15%) translateY(15%);
+  }
+}
+@keyframes people {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes rider {
+  0% {
+    transform: translatex(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes zump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  70% {
+    transform: translateY(-15%);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* 섹션공통 */
+#fullpage {
+  height: 722px;
+  box-sizing: border-box;
+}
+.section {
+  background-color: rgb(42, 193, 188);
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section::-webkit-scrollbar {
+  display: none; /* Chrome , Safari , Opera */
+}
+.img-size {
+  width: 50%;
+  height: auto;
+}
+.npc-size {
+  width: 100%;
+  height: auto;
+}
+.left {
+  width: 60%;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  color: #fff;
+}
+.left > p {
+  margin-top: 15px;
+}
+.right {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+}
+.right .people-bg > img {
+  opacity: 0;
+}
+.right .people-bg.active > img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  animation-name: people;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+/* s0 */
+.s0 {
+  background-color: bisque;
+}
+.s0 .section-bg {
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(../img/main_01@2x.jpg);
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: zoom 1s linear 0s normal forwards running;
+  inset: 0px;
+}
+#fullpage .s0-left {
+  width: 57%;
+  margin-right: 4%;
+}
+#fullpage .s0-left > img {
+  width: 50%;
+  height: auto;
+}
+#fullpage .s0-bottom {
+  display: flex;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 45px;
+  justify-content: space-between;
+}
+#fullpage .s0-bottom .bottom-left {
+  display: flex;
+  flex-direction: column;
+}
+.store-btn {
+  margin-top: 10px;
+}
+.app-store {
+  width: 200px;
+  height: 70px;
+  background: url(../img/img-appstore-default@2x.png) no-repeat center center;
+  background-size: 140px;
+  background-color: #fff;
+  font-size: 0;
+  text-indent: -9999px;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+}
+.play-store {
+  width: 200px;
+  height: 70px;
+  background: url(../img/img-googleplay-default@2x.png) no-repeat center center;
+  background-size: 140px;
+  background-color: #fff;
+  font-size: 0;
+  text-indent: -9999px;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+}
+.resize-btn {
+  display: none;
+  width: 200px;
+  height: 70px;
+  background: url(../img/btn-download-mint@3x.png) no-repeat center top;
+  background-size: 250px;
+  font-size: 0;
+  text-indent: -9999px;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+}
+.qrCode {
+  margin: 10px;
+}
+.qrCode > img {
+  width: 135px;
+  height: auto;
+}
+.top-right {
+  width: 220px;
+  height: 260px;
+  z-index: 10000;
+  display: flex;
+  position: fixed;
+  margin: 0;
+  right: -40px;
+  top: 0px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+.top-right.active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+/* s1 */
+
+.s1-left #date {
+  color: gainsboro;
+}
+.s1-right {
+  display: flex;
+  flex-direction: column;
+}
+.s1-right .road-bg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 80px;
+  left: 105px;
+}
+.s1-right .bike-bg {
+  position: relative;
+}
+
+.s1-right .bike-bg.active > img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  position: absolute;
+  bottom: 150px;
+  left: 0px;
+  animation-name: bike;
+  animation-duration: 1s;
+  animation-play-state: running;
+  animation-fill-mode: forwards; /* 애니메이션이 시작후 다시 원래상태로 안돌아게함 */
+}
+
+.s2-left #area {
+  color: gainsboro;
+}
+
+.s3-left .gift-card {
+  width: 235px;
+  height: 50px;
+  display: block;
+  margin-top: 20px;
+  margin-left: -10px;
+}
+.s3-left .gift-card > img {
+  width: 100%;
+  height: auto;
+}
+.s5-right {
+  bottom: 130px;
+  right: 300px;
+}
+.s5-right .rider-bg > img {
+  opacity: 0;
+}
+.s5-right .rider-bg.active > img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  animation-name: rider;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.scroll {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  animation-name: zump;
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+}
+.scroll > img {
+  width: 100%;
+  height: auto;
+}

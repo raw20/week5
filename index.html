@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>요기요</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.css"
+      integrity="sha512-Go0fX6Al6Eab+N7QbSFHYBpwdcU2rbfONUcbRIS4z+9yzLlj7Xj8ao2BAOPE9Qtxdl+7iq04xzzcF4OTOWoUWg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/vendors/easings.min.js"
+      integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"
+      integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      @media screen and (max-width: 1024px) {
+        .top-right {
+          width: 100px;
+          height: 140px;
+          right: 0;
+        }
+
+        .sns > li {
+          display: none;
+        }
+        .bottom-left span {
+          display: none;
+        }
+        .s0-bottom .store-btn .app-store {
+          display: none;
+        }
+        .s0-bottom .store-btn .play-store {
+          display: none;
+        }
+        .s0-bottom .store-btn .resize-btn {
+          display: block;
+          position: absolute;
+          width: 400px;
+          height: 140px;
+          background-size: 500px;
+          right: 10%;
+        }
+        .bottom-right {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .top-right {
+          width: 100px;
+          height: 140px;
+          right: 0;
+        }
+
+        .s0-bottom .store-btn .resize-btn {
+          display: block;
+          width: 200px;
+          height: 70px;
+          background-size: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="wrap">
+        <div class="logo">
+          <img src="./img/logo@2x.png" alt="배달의민족" />
+        </div>
+        <div class="util">
+          <ul class="sns">
+            <div class="app-down hidden">
+              <img src="./img/btn-download-white@3x.png" alt="" />
+            </div>
+            <li id="fb"><a href="#">페이스북</a></li>
+            <li id="ins"><a href="#">인스타그램</a></li>
+            <li id="nb"><a href="#">네이버블로그</a></li>
+            <li id="yb"><a href="#">유튜브</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--  헤더 -->
+    <div id="menuBar" class="menuBar blind">
+      <ul class="gnb">
+        <li data-menuanchor="section0">
+          <a href="#section0">Section0</a>
+        </li>
+        <li data-menuanchor="section1"><a href="#section1">section1</a></li>
+        <li data-menuanchor="section2"><a href="#section2">Section2</a></li>
+        <li data-menuanchor="section3"><a href="#section3">Section3</a></li>
+        <li data-menuanchor="section4"><a href="#section4">Section4</a></li>
+        <li data-menuanchor="section5"><a href="#section5">Section5</a></li>
+        <li data-menuanchor="section6"><a href="#section6">Section6</a></li>
+      </ul>
+    </div>
+    <!-- 스크롤버튼 -->
+    <div id="fullpage">
+      <div class="top-right">
+        <img src="./img/rider-button-pc@2x.png" alt="라이더" />
+      </div>
+      <div class="section s0" data-index="0">
+        <div class="section-bg"></div>
+        <div class="s0-left left">
+          <img
+            src="./img/main_text_01@2x.png"
+            alt="든든한 집밥 한상이 간절할 때"
+          />
+          <div class="s0-bottom">
+            <div class="bottom-left">
+              <span>앱스토어 다운로드</span>
+              <div class="store-btn">
+                <button class="app-store">앱스토어</button>
+                <button class="play-store">구글플레이</button>
+                <button class="resize-btn">앱 다운로드</button>
+              </div>
+            </div>
+            <div class="bottom-right">
+              <span>QR코드 다운로드</span>
+              <div class="qrCode">
+                <img src="./img/qrcode@3x.png" alt="큐알코드" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section s1" data-index="1">
+        <div class="s1-left left">
+          <img
+            class="img-size"
+            src="./img/ctn01_text_02@2x.png"
+            alt="그것이 무엇이든 다 있다"
+          />
+          <p>
+            3천만 이상이 선택한 배달의 민족, <br />업계 최다 배달가능 업소 보유
+            중!
+          </p>
+          <p id="date">(2017년 11월 기준)</p>
+        </div>
+        <div class="s1-right right">
+          <div class="road-bg">
+            <img class="npc-size" src="./img/img-road@2x.png" alt="끼익" />
+          </div>
+          <div class="bike-bg">
+            <img class="npc-size" src="./img/img-bike@2x.png" alt="오도방" />
+          </div>
+        </div>
+      </div>
+      <div class="section s2" data-index="2">
+        <div class="s2-left left">
+          <img
+            class="img-size"
+            src="./img/ctn02_text_02@2x.png"
+            alt="줄서서 먹던 맛집도 배달 가능"
+          />
+          <p id="deliv-intro">
+            배달이 안되던 동네 맛집까지 ~<br />
+            배민라이더스가 직접 배달해 드립니다.
+          </p>
+          <p id="area">
+            서울 전지역, 경기 및 광역시 일부 지역에서 <br />서비스 이용가능
+          </p>
+        </div>
+        <div class="s2-right right">
+          <div class="people-bg">
+            <img class="npc-size" src="./img/img-people@2x.png" alt="섹션2" />
+          </div>
+        </div>
+      </div>
+      <div class="section s3" data-index="3">
+        <div class="s3-left left">
+          <img class="img-size" src="./img/ctn05_text_01@2x.png" />
+          <p>지금 밥 한끼 보내주고 싶은 분께 <br />배민 상품권을 선물하세요</p>
+          <a class="gift-card" href="#"
+            ><img src="./img/btn_b2b@2x.png" alt=""
+          /></a>
+        </div>
+        <div class="s3-right right">
+          <div class="people-bg">
+            <img class="npc-size" src="./img/img-present@2x.png" alt="섹션3" />
+          </div>
+        </div>
+      </div>
+      <div class="section s4" data-index="4">
+        <div class="s4-left left">
+          <img class="img-size" src="./img/ctn06_text_01@2x.png" />
+          <p>
+            궁금한 맛은 직접 물어보고, 구경하는 재미 <br />이제 배민에서
+            생생하게 경험하세요!
+          </p>
+        </div>
+        <div class="s4-right right">
+          <div class="people-bg">
+            <img
+              class="npc-size"
+              src="./img/img-shoppinglive_re.png"
+              alt="섹션4"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section s5" data-index="5">
+        <div class="s5-left left">
+          <img class="img-size" src="./img/ctn04_text_01@2x.png" />
+          <p>
+            마트까지 가지 않아도, 기다리지 않아도 <br />주문하신 상품을 바로
+            배달해드립니다.
+          </p>
+          <p id="service">
+            서울, 인천 및 경기 일부 지역에서 <br />서비스 이용가능
+          </p>
+        </div>
+        <div class="s5-right right">
+          <div class="rider-bg">
+            <img class="npc-size" src="./img/bmart_rider@2x.png" alt="섹션5" />
+          </div>
+        </div>
+      </div>
+      <div class="section s6" data-index="6">
+        <div class="s6-left left">
+          <img class="img-size" src="./img/ctn03_text_03@2x.png" />
+          <p>
+            배민페이, 네이버페이 등은 물론 <br />각종 신용카드까지 결제 가능!
+          </p>
+        </div>
+        <div class="s6-right right">
+          <div class="people-bg">
+            <img class="npc-size" src="./img/img-flag@2x.png" alt="섹션6" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll">
+      <img src="./img/scroll@2x.png" alt="스크롤" />
+    </div>
+    <script>
+      new fullpage("#fullpage", {
+        licenseKey: "OPEN-SOURCE-GPLv3-LICENSE",
+        autoScrolling: true,
+        scrollHorizontally: true,
+        menu: ".gnb",
+        anchors: [
+          "section0",
+          "section1",
+          "section2",
+          "section3",
+          "section4",
+          "section5",
+          "section6",
+        ],
+      });
+    </script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/background.js"></script>
+  </body>
+</html>

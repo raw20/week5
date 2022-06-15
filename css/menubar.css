@@ -1,0 +1,25 @@
+#menuBar {
+  position: fixed;
+  z-index: 1000;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#menuBar .gnb li {
+  width: 40px;
+  height: 40px;
+  background: url("../img/dotScroll02@2x.png") no-repeat center top;
+}
+#menuBar .gnb li:first-child {
+  display: none;
+}
+#menuBar .gnb li.active a {
+  background: url(../img/dotSelect@2x.png) no-repeat center top;
+}
+#menuBar .gnb li a {
+  display: block;
+  line-height: 50px;
+  font-size: 0px;
+  text-indent: -9999px;
+  opacity: 0.5;
+}
