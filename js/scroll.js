@@ -10,14 +10,11 @@ function observerFnc(entries) {
     if (fullpage_api.getScrollY() > 0) {
       addDownBtn.classList.remove("hidden");
       menuBar.classList.remove("blind");
+      img[index].classList.add("active");
     } else {
       addDownBtn.classList.add("hidden");
       menuBar.classList.add("blind");
     }
-    img.forEach((ele) => {
-      ele.classList.remove("active");
-    });
-    img[index].classList.add("active");
   });
 }
 const option = {

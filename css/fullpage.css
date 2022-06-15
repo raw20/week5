@@ -233,9 +233,9 @@
   width: 100%;
   height: auto;
   opacity: 1;
-  position: absolute;
   bottom: 150px;
   left: 0px;
+  position: absolute;
   animation-name: bike;
   animation-duration: 1s;
   animation-play-state: running;
